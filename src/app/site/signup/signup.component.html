@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-md navbar-dark accent">
+    <a [routerLink]="['/menu-item-list']" class="navbar-brand">
+        <span class="material-icons align-middle">restaurant_menu</span>truYum
+    </a>
+    <button role="button" class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a [routerLink]="['/menu-item-list']" class="nav-link text-light">Menu Items</a>
+            </li>
+            <li class="nav-item"><a [routerLink]="['/login']" class="nav-link text-light">Login</a>
+            </li>
+            <li class="nav-item"><a [routerLink]="['/sign-up']" class="nav-link text-light">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 mr-auto ml-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="card-title font-weight-normal">Signup</h3>
+                        </div>
+                    </div>
+                    <form class="form" novalidate [formGroup]="signUpForm" (ngSubmit)="createUser(signUpForm)">
+                        <div class="form-group">
+                            <label for="Username" name="Username"><h5>Username</h5></label>
+                            <input type="text" id="Username" name="Username" placeholder="Enter Username" class="form-control" formControlName="Username" />
+                            <div class="error-messages">
+                                <ng-container *ngFor="let error of error_messages.Username">
+                                    <div class="error-message" *ngIf="signUpForm.get('Username').hasError(error.type) && (signUpForm.get('Username').dirty || signUpForm.get('Username').touched)">
+                                        {{ error.message }}
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" name="firstName"><h5>First name</h5></label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" class="form-control" formControlName="firstName"/>
+                                <div class="error-messages">
+                                    <ng-container *ngFor="let error of error_messages.firstName">
+                                        <div class="error-message" *ngIf="signUpForm.get('firstName').hasError(error.type) && (signUpForm.get('firstName').dirty || signUpForm.get('firstName').touched)">
+                                            {{ error.message }}
+                                        </div>
+                                    </ng-container>
+                                </div><br>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" name="lastName"><h5>Last name</h5></label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" class="form-control" formControlName="lastName"/>
+                                <div class="error-messages">
+                                    <ng-container *ngFor="let error of error_messages.lastName">
+                                        <div class="error-message" *ngIf="signUpForm.get('lastName').hasError(error.type) && (signUpForm.get('lastName').dirty || signUpForm.get('lastName').touched)">
+                                            {{ error.message }}
+                                        </div>
+                                    </ng-container>
+                                </div><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="password" name="password"><h5>Password</h5></label>
+                                <input type="password" id="password" name="password" placeholder="Enter Password" class="form-control" formControlName="password"/>
+                                <div class="error-messages">
+                                    <ng-container *ngFor="let error of error_messages.password">
+                                        <div class="error-message" *ngIf="signUpForm.get('password').hasError(error.type) && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+                                            {{ error.message }}
+                                        </div>
+                                    </ng-container>
+                                </div><br>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="confirmPassword" name="confirmPassword"><h5>Confirm Password</h5></label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter Confirm Password" class="form-control" formControlName="confirmPassword"/>
+                                <div class="error-messages">
+                                    <ng-container *ngFor="let error of error_messages.confirmPassword">
+                                        <div class="error-message" *ngIf="signUpForm.get('confirmPassword').hasError(error.type) && (signUpForm.get('confirmPassword').dirty || signUpForm.get('confirmPassword').touched)">
+                                            {{ error.message }}
+                                        </div>
+                                    </ng-container>
+                                </div><br>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="form-control btn btn-danger" value ="Save" name="submit" id="button" [disabled]="!signUpForm.valid">Signup</button>
+                        </div>
+                        <div>
+                            Form Error - {{ signUpForm.errors | json }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="container-fluid accent text-light">
+        <p class="m-0">Copyright 2020</p>
+    </div>
+</footer>
