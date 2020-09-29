@@ -18,7 +18,7 @@ export class UserService {
   generateUserList(): void {
     let user: User = new User();
     user.Username = 'admin';
-    user.firstName = 'admin';
+    user.firstName = 'Mr.';
     user.lastName = 'admin';
     user.password = 'admin';
     user.isAdmin = true;

@@ -29,13 +29,13 @@ export class SignupComponent implements OnInit {
 
     'password': [
       { type: 'required', message: 'password is required.' },
-      { type: 'minlength', message: 'password length.' },
-      { type: 'maxlength', message: 'password length.' }
+      { type: 'minlength', message: 'password length cannot be less than 5.' },
+      { type: 'maxlength', message: 'password length cannot exceed 30.' }
     ],
     'confirmPassword': [
       { type: 'required', message: 'password is required.' },
-      { type: 'minlength', message: 'password length.' },
-      { type: 'maxlength', message: 'password length.' }
+      { type: 'minlength', message: 'password length cannot be less than 5.' },
+      { type: 'maxlength', message: 'password length cannot exceed 30.' }
     ],
   }
 
@@ -45,8 +45,8 @@ export class SignupComponent implements OnInit {
       Username:new FormControl('', Validators.compose([Validators.required])),
       firstName:new FormControl('', Validators.compose([Validators.required])),
       lastName:new FormControl('', Validators.compose([Validators.required])),
-      password:new FormControl('', Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(30)])),
-      confirmPassword:new FormControl('', Validators.compose([Validators.required,Validators.minLength(6),Validators.maxLength(30)])),
+      password:new FormControl('', Validators.compose([Validators.required,Validators.minLength(5),Validators.maxLength(30)])),
+      confirmPassword:new FormControl('', Validators.compose([Validators.required,Validators.minLength(5),Validators.maxLength(30)])),
     },{
         validators: this.password.bind(this)
       });

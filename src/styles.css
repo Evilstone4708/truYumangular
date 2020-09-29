@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .accent {
-    background-color: #ff6347 !important;
+    background-color:  #ff6347 !important;
 }
 .delete:hover{
     cursor: pointer;
@@ -14,7 +14,7 @@
 }
 .btn.btn-light.btn-search:disabled{
     background-color: #f8f9fa;
-    opacity: 100% !important;
+    
 }
 .btn.btn-light.btn-search:hover{
     background-color: #f8f9fa;
@@ -57,37 +57,39 @@
     color: #fff !important;
 }
 .btn.btn-accent:hover{
-    background-color: #d4533c !important;
-    border-color: #d4533c !important;
+    background-color: red !important;
+    border-color: red !important;
 }
 .container-fluid.findfood{
-        padding-top:6.9%;
+        padding-top:10%;
 
 }
-@media only screen and (min-width: 768px){
-.header{
-    background-image: url("https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=728&q=80");
-    height: 300px !important;
-    background-size: 920px;
-    background-repeat: repeat;
-}
-}
-@media only screen and (max-width: 760px){
-.header{
-    background-image: url("https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=728&q=80");
-    height: 180px !important;
-    background-repeat: no-repeat !important;
-}
-}
-@media only screen and (min-width: 769px){
-.resp-image{
-    width: 42%;
-}
-}
-@media only screen and (max-width: 768px){
-.resp-image{
-    width: 100%;
-}
+
+
+@media only screen and (min-width: 700px){
+    .header{
+        background-image: url("https://images.unsplash.com/photo-1595174033318-ff6ebd6f77f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+        height: 303px;
+        background-size: 900px;
+        background-size: auto;
+    }
+    }
+    @media only screen and (max-width: 600px){
+    .header{
+        background-image: url("https://images.unsplash.com/photo-1595174033318-ff6ebd6f77f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+        height: 303px ;
+        background-size: auto;
+    }
+    }
+    @media only screen and (min-width: 700px){
+    .resp-image{
+        width: 42%;
+    }
+    }
+    @media only screen and (max-width: 700px){
+    .resp-image{
+        width: 100%;
+    }
 }
 .text-blue{
     color:blue;
@@ -122,6 +124,7 @@
     right: 0px;
     margin-bottom: 0px;
     line-height: 40px;
+    background-color:#ff6347 ;
 }
 .footer.footer-menu {
     position: relative;
@@ -129,5 +132,5 @@
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: #f5f5f5;
+    background-color:#ff6347;
 }

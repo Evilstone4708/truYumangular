@@ -75,7 +75,7 @@ export class FoodService{
     menuItem.price = 99;
     menuItem.category = 'Main Course';
     menuItem.freeDelievery = true;
-    menuItem.dateOfLaunch = new Date('15/03/2017');
+    menuItem.dateOfLaunch = new Date('03/27/2017');
     menuItem.imageURL = 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80';
     this.menuItemList.push(menuItem);
 
@@ -86,7 +86,7 @@ export class FoodService{
     menuItem.price = 129;
     menuItem.category = 'Main Course';
     menuItem.freeDelievery = false;
-    menuItem.dateOfLaunch = new Date('23/12/2017');
+    menuItem.dateOfLaunch = new Date('12/23/2017');
     menuItem.imageURL = 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80';
     this.menuItemList.push(menuItem);
 
@@ -97,7 +97,7 @@ export class FoodService{
     menuItem.price = 149;
     menuItem.category = 'Main Course';
     menuItem.freeDelievery = false;
-    menuItem.dateOfLaunch = new Date('21/08/2017');
+    menuItem.dateOfLaunch = new Date('08/08/2017');
     menuItem.imageURL = 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80';
     this.menuItemList.push(menuItem);
 

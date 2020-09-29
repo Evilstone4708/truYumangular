@@ -1,5 +1,5 @@
 <div class="card mb-2 h-100">
-    <img [src]="item.imageURL" alt="" height="203" class="card-img-top">
+    <img [src]="item.imageURL" height="200" class="card-img-top">
     <div class="card-body">
         <div class="row">
             <div class="col-8 col-sm-8 pr-0" style="overflow: hidden;">
@@ -35,12 +35,12 @@
         <div class="row">
                 <div class="col-7 col-sm-7 pr-0">
                     <div *ngIf="isAdmin">
-                        <p class="tiny text-secondary m-0">
+                        <p class=" text-secondary m-0">
                             <span class="material-icons align-middle md-14">schedule</span>
                             Launch
                         </p>
-                        <p class="tiny text-secondary">
-                            {{item.dateOfLaunch}}
+                        <p class="text-secondary">
+                            {{item.dateOfLaunch|date:'shortDate'}}
                         </p>
                     </div>
                 </div>

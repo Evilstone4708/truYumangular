@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark accent">
-    <a [routerLink]="['/menu-item-list']" class="navbar-brand text-white">
-        <span class="material-icons align-middle">restaurant_menu</span>truYum
+    <a [routerLink]="['/menu-item-list']" class="navbar-brand">
+        <span class="material-icons align-middle">restaurant_menu</span>truyum
     </a>
     <button role="button" class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
         <span class="navbar-toggler-icon"></span>
@@ -16,15 +16,7 @@
                         person
                     </span>{{user.firstName+' '+user.lastName}}</a></li>
             <li class="nav-item d-inline"><a [routerLink]="['/sign-out']" *ngIf="user!=undefined else anonymous" class="nav-link text-light">Signout</a></li>
-            <!-- <span *ngIf="user!=undefined else anonymous">
-                <li *ngIf="!user.isAdmin" class="nav-item d-inline"><a [routerLink]="['/cart']" class="nav-link text-light">Cart</a>
-                </li>
-                <li class="nav-item d-inline"><a href="/logged-in-admin.html" class="nav-link text-light">
-                        <span class="material-icons align-middle">
-                            person
-                        </span>{{user.firstName}}</a></li>
-                <li class="nav-item d-inline"><a class="nav-link text-light">Signout</a></li>
-            </span>-->
+            
             <ng-template #anonymous2>
                 <li class="nav-item"><a [routerLink]="['/login']" class="nav-link text-light">Login</a>
                 </li>
@@ -41,62 +33,7 @@
 
 
 
-<!-- <div class="container-fluid pt-5">
-    <div class="row pt-1">
-        <div class="col-lg-3 col-md-6">
-            <div class="card mb-2" *ngIf="item!=null">
-                <img [src]="item.imageURL" alt="" class="card-img-top">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-8 col-sm-8 pr-0">
-                            <h6 class="card-title font-weight-normal">{{item.foodName}}</h6>
-                        </div>
-                        <div class="col-4 col-sm-4 p-0 text-danger">
-                            <p class="text-right">&#8377;{{item.price}}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8 col-sm-8 pr-0">
-                            <p>
-                                <span *ngIf="item.isActive else nonactive"
-                                    class="badge bg-success text-light mr-1">Active</span>
-                                <ng-template #nonactive>
-                                    <span class="badge bg-danger text-light mr-1">Inactive</span>
-                                </ng-template>
-                                <span class="text-secondary small">{{item.category}}</span>
-                            </p>
-                        </div>
-                        <div class="col-4 col-sm-4 p-0">
-                            <p *ngIf="item.isFreeDelivery" class="small text-right">
-                                <span class="material-icons align-middle md-20 text-blue mr-1">local_shipping</span>
-                                <span class="badge bg-primary text-light">FREE</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-7 col-sm-7 pr-0">
-                            <p class="tiny text-secondary m-0">
-                                <span class="material-icons align-middle md-14">schedule</span>
-                                Launch
-                            </p>
-                            <p class="tiny text-secondary">
-                                {item.launchDate.toLocaleDateString()}} 
-                            </p>
-                        </div>
-                        <div class="col-5 col-sm-5 p-0 text-right">
-                            <a href="#">
-                                <button class="btn btn-accent">
-                                    <span class="material-icons align-middle md-20">edit</span>
-                                    Edit
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
+
 
 <div *ngIf="menuItemList.length!=0 else emptyList">
     <div class="container-fluid pt-5">
@@ -115,7 +52,7 @@
 
         <div class="row">
             <div class="col-md-10 ml-auto mr-auto text-center">
-                <img src="https://i.pinimg.com/originals/88/36/65/8836650a57e0c941b4ccdc8a19dee887.png" class="resp-image" alt="Responsive image">
+                No item Found search new product from item
             </div>
         </div>
     </div>

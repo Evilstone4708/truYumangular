@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark accent">
     <a [routerLink]="['/menu-item-list']" class="navbar-brand">
-        <span class="material-icons align-middle">restaurant_menu</span>truYum
+        <span class="material-icons align-middle">restaurant_menu</span>truyum
     </a>
     <button role="button" class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
         <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
             <li class="nav-item"><a href="/logged-in-admin.html" class="nav-link text-light">
                     <span class="material-icons align-middle">
                         person
-                    </span>{{user.firstName}}</a></li>
+                    </span>{{user.firstName|titlecase}}</a></li>
             <li class="nav-item"><a [routerLink]="['/sign-out']" class="nav-link text-light">Signout</a></li>
         </ul>
     </div>
@@ -35,11 +35,9 @@
                         <small class="text-danger">{{c.price | number:'1.2-2'}}</small>
                     </div>
                     <div class="float-right">
-                        <!-- <button onclick="" class="border-0 bg-white"> -->
                             <span (click)="clicked(c.itemId)" class="material-icons text-secondary md-20 delete">
                                 delete_forever
                             </span>
-                        <!-- </button> -->
                     </div>
                 </a>
                 <a id="item3" class="list-group-item list-group-item-action flex-column align-items-start">
